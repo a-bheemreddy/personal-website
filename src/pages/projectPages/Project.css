@@ -1,0 +1,86 @@
+/* Project.css */
+
+.project {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .project-title {
+    margin-bottom: 20px;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-item {
+    margin-bottom: 5px;
+  }
+  
+  .image-list {
+    display: flex;
+    justify-content: center; /* Center the images list at each row */
+    flex-wrap: wrap;
+  }
+  
+  .image-list img {
+    margin: 5px; /* Add some spacing between images in the list */
+    max-height: 20vh;
+    width: auto; /* Let the image adjust its height while maintaining aspect ratio */
+  }
+
+  .caption {
+    font-size: 14px; /* Adjust the font size for the caption text */
+    margin-top: 5px; /* Add a small margin between images and captions */
+    color: #666; /* Add a slightly different color to the caption text */
+  }
+
+  .caption.dark {
+    color: #999; /* Add a slightly different color to the caption text */
+  }
+
+  .all-para-div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center; /* Center the text div */
+  }
+
+  .text {
+    text-align: left; /* Left-align the text */
+    font-size: 18px; /* Adjust the font size for the paragraph text */
+    line-height: 1.6;
+    color: #000;
+    transition: 0.4s;
+  }
+
+  .text.dark {
+    color: #ccc;
+    transition: 0.4s;
+  }
+
+  .project-title-text {
+    color: #000;
+    transition: 0.4s;
+  }
+
+  .project-title-text.dark {
+    color: #ccc;
+    transition: 0.4s;
+  }
+  
+  .para-set-heading {
+    margin-bottom: -10px;
+  }
+
+  /* Dark Mode */
+  .project.dark {
+    text-align: center;
+    margin-bottom: 40px;
+  }

@@ -1,0 +1,87 @@
+/* Dropdown.css */
+
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-heading {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 38px
+    /* Add other styles for the dropdown heading */
+  }
+  
+  .bar1dd, .bar2dd {
+    width: 10px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px 2px;
+    transition: 0.4s;
+  }
+
+  .bar1dd.dark, .bar2dd.dark {
+    background-color: #fff;
+    transition: 0.4s;
+  }
+
+  .bar1dd.closed  {
+    transform: rotate(45deg)
+  }
+  .bar2dd.closed  {
+    transform: rotate(-45deg)
+  }
+  .bar1dd.open  {
+    transform: rotate(-45deg);
+  }
+  .bar2dd.open {
+    transform: rotate(45deg);
+  }
+
+  .dropdown-toggler {
+    margin-top: 12px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0);
+    margin-bottom: 10px;
+    transform: rotate(90deg);
+    padding: 11px;
+  }
+
+  .dropdown-button-wrapper {
+    margin-top: 0%;
+  }
+  
+  .dropdown-button-wrapper button:hover {
+    background-color: #d1d1d1; /* Change the background color on hover */
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .dropdown-button-wrapper.dark button:hover {
+    background-color: #777777; /* Change the background color on hover */
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 100%; /* Set the width of the dropdown content */
+    /* Add other styles for the dropdown content */
+    height: 0; /* Start with 0 height, so it's initially hidden */
+    overflow-x: hidden; /* Hide the content that overflows the container */
+    overflow-y: scroll;
+    transition: height 0.4s ease; /* Add a smooth transition for max-height */
+
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: blue orange;   /* scroll thumb and track */ 
+  }
+
+  .dropdown-content::-webkit-scrollbar {
+    width: 10px
+  }
+
+  .buffer {
+    height:30px;
+  }

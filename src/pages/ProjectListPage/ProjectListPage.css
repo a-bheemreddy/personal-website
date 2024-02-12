@@ -1,0 +1,15 @@
+/* ProjectsPage.css */
+.projects-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.project_title {
+  text-align: center;
+  color: #000;
+}
+
+.project_title.dark {
+  color: #fff;
+}

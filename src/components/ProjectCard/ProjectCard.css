@@ -1,0 +1,77 @@
+/* ProjectCard.css */
+.project-card {
+    display: inline-block;
+    width: 25vw; /* 25% of the viewport width */
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto; /* Automatically adjust height based on width to maintain aspect ratio */
+    max-height: 25vh; /* Adjust as needed, subtract padding */
+    object-fit: contain; /* Fit within the container while maintaining aspect ratio */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 767px) {
+    .project-card {
+      width: 66vw; /* 66% of the viewport width for smaller screens */
+    }
+    .project-image {
+        max-height: 33vh; /* Adjust as needed, subtract padding */
+    }
+  }
+
+  .image-container {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+  }
+  
+  .project-title {
+    margin-top: 10px;
+    font-size: 18px; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    color: #333;
+    transition: 0.4s;
+  }
+
+  .project-card {
+    background-color: #f5f5f5;
+    color: #333;
+    border-color: #333; /* Border color for light mode */
+    border-style: solid;
+    border-width: 3px;
+  }
+
+  .project-card.dark {
+    background-color: #333;
+    color: #fff;
+    border-color: #fff; /* Border color for light mode */
+    border-style: solid;
+    border-width: 3px;
+    transition: 0.4s;
+  }
+
+  .project-card.dark:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 4px 4px rgba(255, 255, 255, 0.3);
+  }
+
+  .project-title.dark {
+    color: #fff;
+    transition: 0.4s;
+  }
+
+  

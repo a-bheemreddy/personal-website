@@ -1,0 +1,197 @@
+/* Sidebar.css */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 15vw;
+    padding: 20px;
+    background-color: rgba(248,249,250, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+  }
+
+  .sidebar.dark {
+    background-color: rgba(9, 40, 53, 0.85);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+  }
+  
+  .sidebar.collapsed {
+    width: 1vw; /* Adjust the collapsed width as needed */
+    min-width: 21px;
+    background-color: rgba(0,0,0, 0);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+    transition: all 0.4s ease;
+  }
+  
+  /* Add styles for sidebar links and other elements inside the sidebar */
+  .container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 28px;
+    height: 3px;
+    background-color: #333;
+    margin: 7px 3px;
+    transition: 0.4s;
+    opacity: 0.6;
+  }
+
+  .bar1.dark, .bar2.dark, .bar3.dark {
+    background-color: #fff;
+  }
+
+  .navbar-toggler:hover .bar1.collapsed {
+    opacity: 1; /* Opacity when parent is hovered */
+    cursor: pointer;
+  }
+  .navbar-toggler:hover .bar2.collapsed {
+    opacity: 1; /* Opacity when parent is hovered */
+    cursor: pointer;
+  }
+  .navbar-toggler:hover .bar3.collapsed {
+    opacity: 1; /* Opacity when parent is hovered */
+    cursor: pointer;
+  }
+  
+  /* Rotate first bar */
+  .uncollapsed .bar1 {
+    transform: translate(0, 10px) rotate(-45deg);
+    opacity: 1;
+  }
+  
+  /* Fade out the second bar */
+  .uncollapsed .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .uncollapsed .bar3 {
+    transform: translate(0, -10px) rotate(45deg);
+    opacity: 1;
+  }  
+
+  .navbar-toggler {
+    border: none;
+    background-color: rgba(255, 0, 0, 0);
+    margin-bottom: 10px;
+  }
+
+  .toggle-button-wrapper button:hover {
+    background-color: #d1d1d1; /* Change the background color on hover */
+    cursor: pointer;
+  }
+
+  .toggle-button-wrapper.dark button:hover {
+    background-color: #777777; /* Change the background color on hover */
+    cursor: pointer;
+  }
+
+  .toggle-button-wrapper button {
+    transition: background-color 0.3s ease; /* Add transition effect for smooth hover */
+    border-radius: 5px;
+  }
+
+  .toggle-button-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px; /* Add some spacing from the top when collapsed */
+  }
+
+  .picDiv {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pic {
+    width: 80%;
+    height: auto;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; /* Add spacing above and below the list */
+    width: 90%;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px; /* Add spacing between each list item */
+  }
+  
+  .sidebar li a {
+    display: block;
+    padding: 10px;
+    color: #333; /* Text color for the routes */
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Add a smooth transition on hover */
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  .sidebar.dark li a {
+    color: #fff; /* Text color for the routes */
+    transition: background-color 0.3s ease; /* Add a smooth transition on hover */
+  }
+  
+  .sidebar li a:hover {
+    background-color: #d1d1d1; /* Change background color on hover */
+    border-radius: 5px;
+  }
+
+  .sidebar.dark li a:hover {
+    background-color: #777777; /* Change background color on hover */
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 50vw;
+    }
+  
+    .sidebar.collapsed {
+      width: 1vw;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  
+    .toggle-button-wrapper.center {
+      justify-content: flex-end;
+      padding-right: 10px; /* Add some spacing from the right edge */
+    }
+  
+    .toggle-button-wrapper button {
+      height: 40px; /* Set a specific height for the toggle button */
+      margin-bottom: 10px;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 23px;
+        height: 3px;
+        margin: 6px -1px;
+    }
+    
+      /* Rotate first bar */
+    .uncollapsed .bar1 {
+      transform: translate(0, 9px) rotate(-45deg);
+    }
+    
+    /* Fade out the second bar */
+    .uncollapsed .bar2 {
+      opacity: 0;
+    }
+    
+    /* Rotate last bar */
+    .uncollapsed .bar3 {
+      transform: translate(0, -9px) rotate(45deg);
+    }  
+  }
